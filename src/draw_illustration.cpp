@@ -6,7 +6,7 @@
 using namespace cv;
 using namespace std;
 
-static double A[640][640] = { 0 };
+static double A[640][640] = {{0.0}};
 
 
 void draw_illustration(int mi)
@@ -23,5 +23,4 @@ void draw_illustration(int mi)
 	resize(frame, bigImage, Size(frame.cols, frame.rows));
 	imshow("Map", bigImage);
 	waitKey(1);
-	//destroyWindow("Map");
 }

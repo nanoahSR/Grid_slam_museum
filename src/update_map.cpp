@@ -12,7 +12,7 @@ using namespace std;
 
 /*************************************************
 // Method: update_map
-// Description:?
+// Description:
 // Author: RSN
 // Date: 2019/06/27
 // Returns: void
@@ -75,6 +75,7 @@ void update_map(int itr, int numReading, Eigen::VectorXd reading, double pos[3])
 				x_coord = temp_coord[0] - 1;
 				y_coord = temp_coord[1] - 1;
 				//printf("Before: y_coord = %d,x_coord = %d,output = %lf\n", x_coord, y_coord, MAP[itr][y_coord][x_coord]);
+				// <<Probabilistic Robotics>> Page 217. formulas 9.5-9.6.
 				MAP[itr][y_coord][x_coord] =
 					1.0 / (1+factor_empty*((1-MAP[itr][y_coord][x_coord]) / MAP[itr][y_coord][x_coord]));
 				//printf("After: y_coord = %d,x_coord = %d,output = %lf\n", x_coord, y_coord, MAP[itr][y_coord][x_coord]);
